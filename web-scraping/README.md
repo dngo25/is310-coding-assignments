@@ -11,3 +11,52 @@ and social dynamics. Although Avatar the Last Airbender may seen like a light-he
 **Why is this Wiki useful/interesting to researchers?**
 This wiki may be interesting to researchers who are investigating how different cartoons or shows represent Asian culture in various of ways. There are many shows and movies out there that represent asian cultures, but some do a better interpretation than others. 
 Being able to scrap this data about each Avatar the Last Airbender character can give researchers a better understanding of how these charater reflect their own nation in their character style, background, and fighting style. 
+
+**My Process**
+Throughout this scraping process I actaully ran into an issue as fandom wikis implemented a greater anti-bot protection that provented me being able to scrap any data even the name of the charater and their description. After receiving some assistance from professor I was able to scrap information about the main charater Aang on the wikimedia API endpoint instead.
+
+**Code**
+import cloudscraper
+from bs4 import BeautifulSoup
+import time
+import requests
+
+scraper = cloudscraper.create_scraper()
+
+# Aang page
+# url = "https://avatar.fandom.com/wiki/Aang"
+# start = time.time()
+# response = scraper.get("https://avatar.fandom.com/wiki/Aang",timeout=5)
+# end = time.time()
+# print(end - start)
+
+# soup = BeautifulSoup(response.text, "html.parser")
+
+start = time.time()
+# Use action=parse to get rendered HTML for article pages via the MediaWiki API
+response = requests.get(
+    "https://avatar.fandom.com/api.php",
+    params={"action": "parse", "page": "Aang", "prop": "text", "format": "json"},
+    headers={"User-Agent": "Mozilla/5.0"},
+    timeout=5
+)
+end = time.time()
+print(end - start)
+soup = BeautifulSoup(response.json()["parse"]["text"]["*"], "html.parser")
+name = soup.title
+paragraph = soup.find("p").text
+
+print("name:", name)
+print("about:", paragraph)
+
+import json
+
+data = {
+    "name": name,
+    "about": paragraph
+}
+
+with open("aang.json", "w") as f:
+    json.dump(data, f, indent=4)
+
+print("Save to aang.json")
