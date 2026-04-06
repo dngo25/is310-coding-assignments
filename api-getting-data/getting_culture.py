@@ -1,7 +1,7 @@
 import requests
 import json
 
-RIOT_API_KEY = "RGAPI-4e1143f0-b01e-4647-a5e8-ed16df9185be"
+RIOT_API_KEY = "********************"
 region = "na1"
 
 riot_url = f"https://{region}.api.riotgames.com/lol/platform/v3/champion-rotations"
@@ -33,7 +33,7 @@ free_champ_names = [id_to_name[i] for i in free_champ_ids]
 
 print("Free Champion Rotation:", free_champ_names)
 
-EUROPEANA_API_KEY = "fersiconi"
+EUROPEANA_API_KEY = "******"
 search_item = "fallen angel"
 
 url = f"https://api.europeana.eu/record/v2/search.json?query={search_item}&wskey={EUROPEANA_API_KEY}"
