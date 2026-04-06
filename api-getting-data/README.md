@@ -3,6 +3,7 @@
 **API of my choice & Why**
 
 Riot Games: https://developer.riotgames.com/docs/lol#data-dragon_data-assets
+
 DDragon: "https://ddragon.leagueoflegends.com/cdn/13.17.1/data/en_US/champion.json"
 
 I utilized the Riot Games Development API Key in order to collect data on the free champion weekly rotation for League of Legends. I chose this API because I used to 
@@ -14,6 +15,7 @@ matches without any purchase. This week's champion rotation included the charact
 listed as a line of numbers, so to connect the numbered list to their respective champion, I used the ddragon to attach a name to the champion number.
 
 **Europeana collection**
+
 I selected the champion "Aatrox" as my item because I used to play Aatrox, and knowing that he is inspired by mythological stories, I wanted to use Europeana to search
 for some historical context that relates to Aatrox as a character. Initrally I use Europeanan to search for the item "Aatrox" but nothing showed up. I then searched the
 term "fallen angel" as Aatrox, as a character, is inspired by demons. As a result, the output displays a large amount of data about real-life culture in various places such as 
