@@ -1,6 +1,7 @@
 **GETting Culture Across APIs**
 
 **API of my choice & Why**
+
 Riot Games: https://developer.riotgames.com/docs/lol#data-dragon_data-assets
 DDragon: "https://ddragon.leagueoflegends.com/cdn/13.17.1/data/en_US/champion.json"
 
