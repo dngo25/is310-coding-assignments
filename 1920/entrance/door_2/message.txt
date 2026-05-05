@@ -1,0 +1,1 @@
+SO this is not a good start to maze, you've made a wrong turn and you must go back if you wish to get out.

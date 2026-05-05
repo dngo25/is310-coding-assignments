@@ -1,0 +1,1 @@
+Sometimes barriers are invisible. Try 'ls -a' to see hidden issues.
