@@ -20,6 +20,6 @@ How will you work with AI? What tools if any do you plan to use?
 
 Hypothesis username: dianango25
 
-I plan to use GitHub Codepilot to help explain coding functions.
+I plan to use GitHub Codepilot to help explain coding functions. Additionally, I will use ChatGPT to help debug and curate sections of my code, most notably for analyzing sentiment analysis, importing VADER, debugging function logic, and reformatting the CSV file.
 
 ![AI Tool Proof](images/ai-tool.png)
